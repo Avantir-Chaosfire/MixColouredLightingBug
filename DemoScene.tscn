@@ -1,0 +1,109 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://light.png" type="Texture" id=1]
+[ext_resource path="res://DemoScene.gd" type="Script" id=2]
+
+[node name="Scene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="Polygon2D" parent="."]
+color = Color( 0.5, 0.5, 0.5, 1 )
+polygon = PoolVector2Array( 0, 0, 1024, 0, 1024, 600, 0, 600 )
+
+[node name="RedSprite1" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 150, 201 )
+scale = Vector2( 0.1, 0.1 )
+z_index = 1
+texture = ExtResource( 1 )
+
+[node name="GreenSprite1" type="Sprite" parent="."]
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( 240, 201 )
+scale = Vector2( 0.1, 0.1 )
+z_index = 2
+texture = ExtResource( 1 )
+
+[node name="RedSprite2" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 150, 471 )
+scale = Vector2( 0.1, 0.1 )
+z_index = 2
+texture = ExtResource( 1 )
+
+[node name="GreenSprite2" type="Sprite" parent="."]
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( 240, 471 )
+scale = Vector2( 0.1, 0.1 )
+z_index = 1
+texture = ExtResource( 1 )
+
+[node name="RedLight" type="Light2D" parent="."]
+position = Vector2( 600, 336 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 1 )
+color = Color( 1, 0, 0, 1 )
+mode = 2
+
+[node name="GreenLight" type="Light2D" parent="."]
+position = Vector2( 690, 336 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 1 )
+color = Color( 0, 1, 0, 1 )
+mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label1" type="Label" parent="CanvasLayer"]
+margin_left = 150.0
+margin_top = 81.0
+margin_right = 234.0
+margin_bottom = 95.0
+text = "Green on top"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+margin_left = 150.0
+margin_top = 351.0
+margin_right = 234.0
+margin_bottom = 365.0
+text = "Red on top"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+margin_left = 600.0
+margin_top = 216.0
+margin_right = 684.0
+margin_bottom = 230.0
+text = "Arbitrary"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="CanvasLayer"]
+margin_left = 584.0
+margin_top = 15.0
+margin_right = 738.0
+margin_bottom = 29.0
+text = "Mixed Coloured Lighting"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="CanvasLayer"]
+margin_left = 165.0
+margin_top = 15.0
+margin_right = 319.0
+margin_bottom = 29.0
+text = "Sprites"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Divider" type="Line2D" parent="."]
+points = PoolVector2Array( 400, 0, 400, 600 )
+default_color = Color( 1, 1, 1, 1 )
